@@ -5,7 +5,8 @@ async function seed() {
     const createdUsers = await prisma.user.createMany({
         data: [
             { username: 'alice', email : 'Alice@gmail.com'},
-            { username: 'Farshad', email : 'Farshad@gmail.com'}
+            { username: 'Farshad', email : 'Farshad@gmail.com'},
+            { username: 'Azam', email : 'azam@gmail.com'}
         ]
     });
 
@@ -18,6 +19,9 @@ async function seed() {
             },
             {   picture : 'FarshadPic', bio : 'Web Developer',
                 userId : 2
+            },
+            {   picture : 'AzamPic', bio : 'Travel lover',
+                userId : 3
             }
         ]
     })
@@ -41,6 +45,16 @@ async function seed() {
                 userId : 2,
                 title : 'Two of Us',
                 content : 'An easy Game .'
+            },
+            {
+                userId : 3,
+                title : 'Paris',
+                content : 'Next year will go there!'
+            },
+            {
+                userId : 3,
+                title : 'Githorn',
+                content : 'Nice place to go'
             }
         ]
     })
@@ -52,29 +66,29 @@ async function seed() {
                 userId : 1,
                 content : 'Good Game'
             },
-            {
-                postId : 1,
-                userId : 1,
-                content : 'Good Game'
-            },
-            {
-                postId : 1,
-                userId : 1,
-                content : 'Good Game'
-            },
-            {
-                postId : 1,
-                userId : 1,
-                content : 'Good Game'
-            },
-            {
-                postId : 1,
-                userId : 1,
-                content : 'Good Game'
-            },
+            // {
+            //     postId : 2,
+            //     userId : 1,
+            //     content : 'Good Game'
+            // },
             {
                 postId : 3,
-                userId : 1,
+                userId : 2,
+                content : 'Good Game'
+            },
+            // {
+            //     postId : 1,
+            //     userId : 1,
+            //     content : 'Good Game'
+            // },
+            // {
+            //     postId : 1,
+            //     userId : 1,
+            //     content : 'Good Game'
+            // },
+            {
+                postId : 6,
+                userId : 3,
                 content : 'Good Game'
             }
         ]
